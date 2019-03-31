@@ -4,10 +4,89 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+	<style>
+		body{
+			-webkit-perspective: 5000;
+			
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 500px;
+			top: 500px;
+			transform-style: preserve-3d;
+			margin: -200px 0 0 -200px;
+			-webkit-perspective: 50000;
+			animation: name 2s linear infinite;
+		}
+		@-webkit-keyframes name{
+			from{transform: rotateY(0) rotateX(0);}
+			to{transform: rotateY(360deg) rotateX(360deg);}
+		}
+		.box div{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			line-height: 400px;
+			font-size: 30px;
+			color: yellow;
+			transition: 2s;
+		}
+		.box div:nth-of-type(1){
+			background: red;
+			transform: translateZ(-200px);
+		}
+		.box div:nth-of-type(2){
+			background: blue;
+			transform: rotateX(90deg) translateZ(200px);
+		}
+		.box div:nth-of-type(3){
+			background: orange;
+			transform: rotateX(90deg) translateZ(-200px);
+		}
+		.box div:nth-of-type(4){
+			background: green;
+			transform: rotateY(90deg) translateZ(200px);
+		}
+		.box div:nth-of-type(5){
+			background: skyblue;
+			transform: rotateY(90deg) translateZ(-200px);
+		}
+		.box div:nth-of-type(6){
+			background:pink;
+			transform:  translateZ(200px);
+		}
+		.box:hover div:nth-of-type(6){
+			transform:  translateZ(400px);
+		}
+		.box:hover div:nth-of-type(5){
+			transform: rotateY(90deg) translateZ(-400px);
+		}
+		.box:hover div:nth-of-type(4){
+			transform:rotateY(90deg) translateZ(400px);
+		}
+		.box:hover div:nth-of-type(3){
+			transform:rotateX(90deg) translateZ(-400px);
+		}
+		.box:hover div:nth-of-type(2){
+			transform:rotateX(90deg) translateZ(400px);
+		}
+		.box:hover div:nth-of-type(1){
+			transform: translateZ(-400px);
+		}
+	</style>
 	<body>
-             <div>
-		     
-                 <img src="imgs/main_kv.jpg"/>
-             </div>
+		<div class="box">
+			<div>1</div>
+			<div>大家好</div>
+			<div>我来自1807</div>
+			<div>我是一名学生</div>
+			<div>我的名字叫</div>
+			<div>翟壮壮</div>
+		</div>
 	</body>
 </html>
